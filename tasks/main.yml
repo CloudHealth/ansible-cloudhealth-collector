@@ -1,0 +1,16 @@
+---
+
+- name: Ensure httplib2 is installed
+  apt:
+    name: python-httplib2
+    state: present
+  sudo: yes
+
+- name: Upload facts to CloudHealth Technologies API
+  uri:
+    HEADER_Access-Token: 'CLOUDHEALTH_API_KEY'
+    HEADER_Content-Type: application/json
+    url: https://api.cloudhealthtech.com/v1/ansible/upload
+    method: POST
+    body: "{}"
+    status_code: 201 # Created
