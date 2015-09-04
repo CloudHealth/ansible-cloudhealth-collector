@@ -71,6 +71,13 @@ vagrant up # Unnecessary if the VM is already running
 vagrant provision
 ```
 
+To run an ad-hocs command on that machine, for example to retrieve all facts
+from it, run the following:
+
+```bash
+ansible all -i .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory -u vagrant --private-key .vagrant/machines/default/virtualbox/private_key -m setup
+```
+
 Once you are done with changes, you can run one of the following:
 
 ```bash
