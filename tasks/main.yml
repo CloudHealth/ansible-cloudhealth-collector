@@ -3,7 +3,7 @@
 - name: Upload facts to CloudHealth Technologies API
   local_action:
     module: uri
-    HEADER_Access-Token: cloudhealth_api_key
+    HEADER_Access-Token: "{{ cloudhealth_api_key }}"
     HEADER_Content-Type: application/json
     url: "{{ cloudhealth_api_host }}/v1/ansible/upload"
     method: POST
