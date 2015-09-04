@@ -2,16 +2,16 @@
 
 # ansible-role-cloudhealth
 
-## Requirements
+## Requirements
 
 This module requires `httplib2` to be installed on the host machine. It can be
 installed via `apt-get` (`sudo apt-get install python-httplib2`) or via `pip`
 (`sudo pip install httplib2`) if not available in the distribution package
 manager.
 
-## Role Variables
+## Role Variables
 
-### `cloudhealth_api_key`
+### `cloudhealth_api_key`
 
 <img src="docs/cht_api_key.png" alt="CHT API Key" align="right" height="130px">
 
