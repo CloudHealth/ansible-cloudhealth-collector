@@ -1,11 +1,5 @@
 ---
 
-- name: Ensure httplib2 is installed
-  apt:
-    name: python-httplib2
-    state: present
-  sudo: yes
-
 - name: Upload facts to CloudHealth Technologies API
   local_action:
     module: uri
