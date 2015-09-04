@@ -7,7 +7,8 @@
   sudo: yes
 
 - name: Upload facts to CloudHealth Technologies API
-  uri:
+  local_action:
+    module: uri
     HEADER_Access-Token: cloudhealth_api_key
     HEADER_Content-Type: application/json
     url: https://api.cloudhealthtech.com/v1/ansible/upload
