@@ -1,15 +1,11 @@
 ---
 
-- name: Gather facts
-  setup:
-  register: ansible_facts
-
 - name: Upload facts to CloudHealth Technologies API
   uri:
     HEADER_Access-Token: "{{ cloudhealth_api_key }}"
     HEADER_Content-Type: application/json
     url: "{{ cloudhealth_api_host }}/v1/ansible/upload"
     method: POST
-    body: "{{ ansible_facts['ansible_facts'] | to_json }}"
+    body: "{{ hostvars[inventory_hostname] | to_json }}"
     status_code: 201 # Created
   connection: local

@@ -1,7 +1,6 @@
 ---
 
 - hosts: all
-  gather_facts: no
 
   vars:
     cloudhealth_api_key: "{{ lookup('env','CLOUDHEALTH_API_KEY') }}"
