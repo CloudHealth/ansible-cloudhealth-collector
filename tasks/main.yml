@@ -1,5 +1,8 @@
 ---
 
+- name: Gather EC2 facts
+  ec2_facts:
+
 - name: Upload facts to CloudHealth Technologies API
   uri:
     HEADER_Access-Token: "{{ cloudhealth_api_key }}"
