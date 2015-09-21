@@ -26,26 +26,30 @@ page:
 
 ![Ansible Account API key](docs/ansible_account_api_key.png)
 
-Define it in your playbooks like this:
+You then need to define it in your playbooks.
+
+The most straightforward way to do so is to store it in plain text in your
+playbook variables:
 
 ```yaml
 cloudhealth_api_key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-You can avoid to store your API key in your playbooks by setting it like this:
+However, to avoid storing your API key in your playbooks, first set the following in your playbook variables:
 
 ```yaml
 cloudhealth_api_key: "{{ lookup('env','CLOUDHEALTH_API_KEY') }}"
 ```
 
-Then, in your `~/.bashrc` file, add the following line and don't forget to
-`source ~/.bashrc` or open a new terminal:
+Then, either add the following line in your `~/.bashrc` file (don't forget to
+`source ~/.bashrc` or to open a new terminal) or run this command before
+executing your playbooks:
 
 ```bash
 export CLOUDHEALTH_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-Another option is to use
+Finally, a third option, more secure, is to use
 [Ansible Vault](http://docs.ansible.com/ansible/playbooks_vault.html) to store
 the API key.
 
