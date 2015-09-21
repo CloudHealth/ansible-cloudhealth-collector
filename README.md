@@ -13,14 +13,18 @@ manager.
 
 ### `cloudhealth_api_key`
 
-<img src="docs/cht_api_key.png" alt="CHT API Key" align="right" height="130px">
-
 The `cloudhealth_api_key` is used to identify yourself to our API. This
 variable is **required**.
 
-Your API key can be found in the *Settings* section of
-[your profile](https://apps.cloudhealthtech.com/profile). If it appears to be
-empty, click on *Get API Key* to get one.
+Go to the [Ansible Accounts](https://apps.cloudhealthtech.com/ansible_accounts)
+page. If there is no accounts listed yet, create one by clicking on [*New
+Account*](https://apps.cloudhealthtech.com/ansible_accounts/new).
+
+Your API key will then be listed next to your account name on that [Ansible
+Accounts](https://apps.cloudhealthtech.com/ansible_accounts)
+page:
+
+![Ansible Account API key](docs/ansible_account_api_key.png)
 
 Define it in your playbooks like this:
 
