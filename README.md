@@ -9,6 +9,11 @@ installed via `apt-get` (`sudo apt-get install python-httplib2`) or via `pip`
 (`sudo pip install httplib2`) if not available in the distribution package
 manager.
 
+Additionally, there is a current limitation regarding the `uptime` of your
+nodes: you need to either use Ansible 2+, or to have `ohai` or `facter`
+installed on your managed nodes. Failing to do so will leave your nodes'
+`uptime` information blank on the CloudHealth platform.
+
 ## Role Variables
 
 ### `cloudhealth_api_key`
