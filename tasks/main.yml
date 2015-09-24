@@ -3,6 +3,11 @@
 - name: Gather EC2 facts
   ec2_facts:
 
+- name: Ensure ansible_version is added to the gathered facts
+  set_fact:
+    # `ansible_version` support was added in Ansible 1.8.0
+    ansible_version: "{{ ansible_version | default({}) }}"
+
 - name: Upload facts to CloudHealth Technologies API
   uri:
     HEADER_Access-Token: "{{ cloudhealth_api_key }}"
