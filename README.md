@@ -4,6 +4,10 @@
 
 ## Requirements
 
+Make sure that you have not [turned off fact
+gathering](https://docs.ansible.com/ansible/playbooks_variables.html#turning-off-facts)
+in your playbooks. `gather_facts: no` must not be present in your playbooks.
+
 This module requires `httplib2` to be installed on the host machine. It can be
 installed via `apt-get` (`sudo apt-get install python-httplib2`) or via `pip`
 (`sudo pip install httplib2`) if not available in the distribution package
