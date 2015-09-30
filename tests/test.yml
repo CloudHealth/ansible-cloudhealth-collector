@@ -6,5 +6,5 @@
     cloudhealth_api_key: "{{ lookup('env','CLOUDHEALTH_API_KEY') }}"
 
   roles:
-    - role: ../../ansible-role-cloudhealth
+    - role: ansible-role-cloudhealth
       cloudhealth_api_host: http://0.0.0.0:9292
