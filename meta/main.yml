@@ -2,7 +2,7 @@
 
 galaxy_info:
   author: Jérémie Astori
-  description: TODO
+  description: Ansible role that allows CloudHealth's customers to integrate our platform into their Ansible setup.
   company: CloudHealth Technologies
   license: MIT
   min_ansible_version: 1.2

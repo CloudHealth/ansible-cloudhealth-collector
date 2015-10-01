@@ -1,6 +1,9 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-# ansible-role-cloudhealth
+# CloudHealth Collector
+
+This role allows CloudHealth's customers to integrate our platform into their
+Ansible setup.
 
 ## Requirements
 
