@@ -17,3 +17,4 @@
     body: "{{ hostvars[inventory_hostname] | to_json }}"
     status_code: 201 # Created
   connection: local
+  sudo: no
